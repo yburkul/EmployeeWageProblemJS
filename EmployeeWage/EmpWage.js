@@ -1,4 +1,4 @@
-//UC2 Calculate Part Time And Full Time Employee Wage
+//UC3 Get workong Hours
 const IS_PART_TIME = 1;
 const IS_FULL_TIME = 2;
 const PART_TIME_HOURS = 4;
@@ -15,10 +15,14 @@ function getWorkingHours(empCheck) {
             return 0;
     }
 }
-let empHrs = 0;
-let empCheck = Math.floor(Math.random() * 10) % 3;
-empHrs = getWorkingHours(empCheck);
-let empWage = empHrs * WAGE_PER_HOUR;
-//UC3 Get workong Hours
-console.log("Hours: " +empHrs);    
-console.log("Employee Wage: " + empWage);
+
+//UC4 Calculte Wages for a month assuming 20 working days in a month
+const Num_OF_Working_DAYS = 20;
+let totalempHrs = 0;
+for (let day = 0; day < Num_OF_Working_DAYS; day++)
+{
+    let empCheck = Math.floor(Math.random() * 10) % 3;
+    totalempHrs += getWorkingHours(empCheck);
+}
+let empWage = totalempHrs * WAGE_PER_HOUR;
+console.log("Total Hrs: " +totalempHrs+ " Emp Wage: " + empWage);
