@@ -12,8 +12,10 @@ let empHrs = 0;
 let dailyEmpHrs = 0;
 let dailyempwage = 0;
 
-function getWorkingHours(empCheck) {
-    switch (empCheck) {
+function getWorkingHours(empCheck)
+ {
+    switch (empCheck) 
+    {
         case IS_PART_TIME:
             return PART_TIME_HOURS;
         case IS_FULL_TIME:
